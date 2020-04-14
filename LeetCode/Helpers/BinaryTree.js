@@ -44,10 +44,10 @@ class BinarySearchTree {
     removeNode(node, key) {
         if (node === null) {
             return null;
-        } else if(key < node.data) {
+        } else if (key < node.data) {
             node.left = this.removeNode(node.left, key);
             return node;
-        } else if(key > node.data) {
+        } else if (key > node.data) {
             node.right = this.removeNode(node.right, key);
             return node;
         } else {
@@ -109,17 +109,17 @@ class BinarySearchTree {
     search(node, data) {
         if (node === null) {
             return null;
-        } else if(data < node.data) {
+        } else if (data < node.data) {
             return this.search(node.left, data);
-        } else if(data > node.data) {
+        } else if (data > node.data) {
             return this.search(node.right, data);
         } else {
             return node;
         }
     }
- }
+}
 
- // TEST
+// TEST
 
 //  var bst = new BinarySearchTree();
 //  for (let i = 0; i < 30; i++) {
@@ -130,3 +130,5 @@ class BinarySearchTree {
 //  bst.inorder(root);
 //  bst.preorder(root);
 //  bst.postorder(root);
+
+module.exports = BinarySearchTree;

@@ -1,23 +1,5 @@
-function printNestedArr(arr) {
-    let string = "[\n\r";
-    if (arr.length > 0) {
-        for (let i = 0; i < arr.length - 1; i++) {
-            const element = arr[i];
-            string += "    [ " + element.join(", ") + " ],\n\r";
-        }
-        string += "    [ " + arr[arr.length - 1].join(", ") + " ]";
-    }
-
-    return string + "\n\r]";
-}
-
-// let testB = [
-//     ["ate", "eat", "tea"],
-//     ["nat", "tan"],
-//     ["bat"]
-// ];
-
-// console.log(printNestedArr(testB));
+//import { printNestedArr } from "../Helpers/PrintNestedArr";
+var printNestedArr = require("../Helpers/PrintNestedArr");
 
 /*
 Given an array of strings, group anagrams together.
