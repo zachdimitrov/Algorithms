@@ -8,3 +8,12 @@ You are given a string s containing lowercase English letters, and a matrix shif
 
   Return the final string after all operations.
 */
+
+/**
+ * @param {string} s
+ * @param {number[][]} shift
+ * @return {string}
+ */
+var stringShift = function(s, shift) {
+
+};
