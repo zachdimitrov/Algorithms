@@ -15,5 +15,24 @@ You are given a string s containing lowercase English letters, and a matrix shif
  * @return {string}
  */
 var stringShift = function(s, shift) {
+  let arr = s.split("");
 
+  for (let i = 0; i < shift.length; i++) {
+    const com = shift[i];
+    if (com[0] === 0) {
+      for (let j = 0; j < com[1]; j++) {
+        let letter = arr.shift();
+        arr.push(letter);
+      }
+    } else {
+      for (let j = 0; j < com[1]; j++) {
+        let letter = arr.pop();
+        arr.unshift(letter);
+      }
+    }
+  }
+
+  return arr.join("");
 };
+
+console.log(stringShift("abcdefg", [[1,1],[1,1],[0,2],[1,3]]));
