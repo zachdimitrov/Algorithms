@@ -15,11 +15,11 @@ var productExceptSelf = function(nums) {
     for (let i = 0; i < nums.length; i++) {
         const e = nums[i];
         nums[i] = 1;
-        output[i] = nums.reduce((a,b) => a * b);
+        output[i] = nums.reduce((a, b) => a * b);
         nums[i] = e;
     }
 
     return output;
 };
 
-console.log(productExceptSelf([1,2,3,4]).join(", "));
+console.log(productExceptSelf([1, 2, 3, 4]).join(", "));
